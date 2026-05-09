@@ -1,21 +1,28 @@
-function login() {
-    var user = document.getElementById("username").value;
-    var pass = document.getElementById("password").value;
-
-    // Hapa tumeweka password rahisi kwa ajili ya majaribio
-    if (user === "admin" && pass === "1234") {
-        document.getElementById("login-page").style.display = "none";
-        document.getElementById("dashboard").style.display = "flex";
-        document.getElementById("user-display").innerText = user.toUpperCase();
-    } else {
-        document.getElementById("error-msg").style.display = "block";
-    }
+/* Custom urembo kusaidia Bootstrap */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-function logout() {
-    document.getElementById("login-page").style.display = "flex";
-    document.getElementById("dashboard").style.display = "none";
-    // Safisha fomu
-    document.getElementById("username").value = "";
-    document.getElementById("password").value = "";
+#login-page {
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.list-group-item {
+    padding: 15px 20px;
+}
+
+/* Kufanya meza ifanane na mifumo ya chuo */
+.table th {
+    background-color: #f8f9fa;
+    color: #495057;
 }
