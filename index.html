@@ -3,49 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Yangu ya IT</title>
+    <title>SR2 Login System</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">IT Student</div>
+    <div id="login-page" class="login-container">
+        <div class="login-box">
+            <img src="https://via.placeholder.com/80" alt="Logo" class="logo-img">
+            <h2>SR2 STUDENT LOGIN</h2>
+            <p>Ingia kuona taarifa zako</p>
+            <input type="text" id="username" placeholder="Username (andika: admin)">
+            <input type="password" id="password" placeholder="Password (andika: 1234)">
+            <button onclick="login()">LOG IN</button>
+            <p id="error-msg" style="color: red; display: none; margin-top: 10px;">Login imefeli!</p>
+        </div>
+    </div>
+
+    <div id="dashboard" class="main-wrapper" style="display: none;">
+        <nav class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">IT</div>
+                <h3 id="user-display">Mwanafunzi</h3>
+                <p>Status: Online</p>
+            </div>
             <ul>
-                <li><a href="#">Nyumbani</a></li>
-                <li><a href="#about">Kuhusu</a></li>
-                <li><a href="#skills">Ujuzi</a></li>
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li><a href="#">Matokeo</a></li>
+                <li><a href="#">Usajili</a></li>
+                <li class="logout-link"><a href="#" onclick="logout()">LOG OUT</a></li>
             </ul>
         </nav>
-    </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Habari, Mimi ni Mwanafunzi wa IT</h1>
-            <p>Ninajishughulisha na kutengeneza mifumo ya kidijitali na uchambuzi wa teknolojia nchini Tanzania.</p>
-            <a href="https://instagram.com/USERNAME_YAKO" class="btn">Nifollow Instagram</a>
-        </div>
-    </section>
+        <main class="content">
+            <header class="top-bar">
+                <h2>MFUMO WA MWANAFUNZI (SR2)</h2>
+                <button class="btn-logout-top" onclick="logout()">Logout</button>
+            </header>
 
-    <section id="about" class="container">
-        <h2>Kuhusu Mimi</h2>
-        <p>Karibu kwenye website yangu! Mimi ni mdau wa teknolojia ninayependa kujifunza kuhusu Web Development, Cybersecurity, na Digital Marketing.</p>
-    </section>
+            <section class="dashboard-grid">
+                <div class="stat-card">
+                    <h4>Kozi</h4>
+                    <p>Information Technology</p>
+                </div>
+                <div class="stat-card blue">
+                    <h4>Hali ya Usajili</h4>
+                    <p>Active</p>
+                </div>
+            </section>
+        </main>
+    </div>
 
-    <section id="skills" class="container bg-light">
-        <h2>Ujuzi Wangu</h2>
-        <div class="skills-grid">
-            <div class="skill-card">HTML/CSS</div>
-            <div class="skill-card">IT Networking</div>
-            <div class="skill-card">Content Creation</div>
-            <div class="skill-card">Software Testing</div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 | Imetengenezwa na [Jina Lako]</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
